@@ -31,6 +31,10 @@ python do_dependencytrack_init() {
         "version": 1,
         "metadata": {
             "timestamp": datetime.now().isoformat(),
+            "component": {
+                "type": "operating-system",
+                "name": d.getVar("DISTRO_NAME"),
+            }
         },
         "components": []
     })
