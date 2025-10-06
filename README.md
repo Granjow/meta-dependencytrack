@@ -1,5 +1,12 @@
 # meta-dependencytrack
 
+*This is a fork from [https://github.com/bgnetworks/meta-dependencytrack](https://github.com/bgnetworks/meta-dependencytrack) which appears to be unmaintained since 2022.*
+
+Improvements over the fork are:
+
+* Generated CycloneDX files are compatible with version 1.6
+* If no dependency track URL is provided, the layer just stores the file instead of failing
+
 `meta-dependencytrack` is a [Yocto](https://www.yoctoproject.org/) meta-layer which produces a [CycloneDX](https://cyclonedx.org/) Software Bill of Materials (aka [SBOM](https://www.ntia.gov/SBOM)) from your root filesystem and then uploads it to a [Dependency-Track](https://dependencytrack.org/) server against the project of your choice.
 
 ## Installation
