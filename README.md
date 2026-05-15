@@ -5,9 +5,13 @@
 Improvements over the fork are:
 
 * Generated CycloneDX files are compatible with version 1.6
+  * Since May 2026, they are really compatible – before, the component’s type was missing
 * If no dependency track URL is provided, the layer just stores the file instead of failing
 
 `meta-dependencytrack` is a [Yocto](https://www.yoctoproject.org/) meta-layer which produces a [CycloneDX](https://cyclonedx.org/) Software Bill of Materials (aka [SBOM](https://www.ntia.gov/SBOM)) from your root filesystem and then uploads it to a [Dependency-Track](https://dependencytrack.org/) server against the project of your choice.
+
+* [CycloneDX specs](https://cyclonedx.org/specification/overview/)
+* [CycloneDX 1.7 JSON spec](https://cyclonedx.org/docs/1.7/json/#metadata_tools_oneOf_i0_components_items_type)
 
 ## Installation
 
