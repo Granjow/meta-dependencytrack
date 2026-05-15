@@ -26,7 +26,7 @@ python do_dependencytrack_init() {
     bb.debug(2, "Creating empty sbom")
     write_sbom(d, {
         "bomFormat": "CycloneDX",
-        "specVersion": "1.4",
+        "specVersion": "1.6",
         "serialNumber": "urn:uuid:" + str(uuid.uuid4()),
         "version": 1,
         "metadata": {
@@ -60,7 +60,8 @@ python do_dependencytrack_collect() {
             sbom["components"].append({
                 "name": names[index],
                 "version": version,
-                "cpe": cpe
+                "cpe": cpe,
+                "type": "application",
             })
 
     # write it back to the deploy directory
